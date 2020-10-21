@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Antariksh Gosain c076068</title>
+	<style>
+		.container {
+		  position: relative;
+		  width: 300px;
+		}
+
+		.image {
+		  display: block;
+		  width: 300px;
+		  height: 300px;
+		}
+
+		.overlay {
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  height: 100%;
+		  width: 100%;
+		  opacity: 0;
+		  transition: .5s ease;
+		  background-color: #008CBA;
+		}
+
+		.container:hover .overlay {
+		  opacity: 1;
+		}
+
+		.text {
+		  color: white;
+		  font-size: 20px;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  -webkit-transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);
+		  text-align: center;
+		}
+</style>
+</head>
+<body>
+<h1>Welcome to Antariksh Gosain (c0760068) LAB Assignment 1</h1>
+<img id="myImage" onclick="changeImage()" src="pic_bulboff.gif" width="100" height="180">
+
+<p>Click the light bulb to turn on/off the light.</p>
+
+<script>
+
+function changeImage() {
+  var image = document.getElementById('myImage');
+  if (image.src.match("bulbon")) {
+    image.src = "pic_bulboff.gif";
+  } else {
+    image.src = "pic_bulbon.gif";
+  }
+}
+
+function getAlert() {
+	alert("Thanks for clicking on the image! (The Event was registered)");
+}
+
+</script>
+
+<h1>Hover on image to see my message!</h1>
+<div onclick="getAlert()" class="container">
+  <img  src="profile123.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Please click here</div>
+  </div>
+</div>
+
+</body>
+</html>
